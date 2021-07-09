@@ -18,7 +18,7 @@ on:
     - 'master'
 
 env:
-  DOCKER_USERNAME: fr3akyphantom
+  DOCKER_USERNAME: aseelsathar
   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
 jobs:
@@ -51,14 +51,3 @@ jobs:
     - name: Pull & Run/Test the Bionic Droid Builder Container
       if: "! contains(github.event.head_commit.message, '[skip ci]')"
       run: make test NAME=${{ matrix.platform }}
-
-  metadata:
-    runs-on: ubuntu-latest
-    needs: [build]
-
-    steps:
-
-    - name: Refresh MicroBadger Metadata for Container Infos
-      if: "! contains(github.event.head_commit.message, '[skip ci]')"
-      run: curl -X POST "https://hooks.microbadger.com/images/fr3akyphantom/droid-builder/BvX646w7iSxCNiWg_M7-amdz4qo=" || true
-

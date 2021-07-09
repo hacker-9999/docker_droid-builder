@@ -8,7 +8,7 @@ on:
         required: false
 
 env:
-  DOCKER_USERNAME: fr3akyphantom
+  DOCKER_USERNAME: aseelsathar
   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
 jobs:

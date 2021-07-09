@@ -3,7 +3,7 @@ FROM ubuntu:${CODENAME}
 # Use Ubuntu Bionic/Focal LTS image as base
 
 # Add legacy label for maintainer
-LABEL maintainer="fr3akyphantom <rokibhasansagar2014@outlook.com>"
+LABEL maintainer="aseelpsathar <aseelsathar@gmail.com>"
 
 ENV \
   DEBIAN_FRONTEND=noninteractive \
