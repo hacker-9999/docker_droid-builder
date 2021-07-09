@@ -28,6 +28,8 @@ RUN set -xe \
   && apt-get install -q -y --no-install-recommends \
     # Core Apt Packages
     apt-utils apt-transport-https python3-apt \
+    # Custom needs
+    pigz rclone aria2 \
     # Linux Standard Base Packages
     lsb-core lsb-security ca-certificates systemd udev \
     # Upload/Download/Copy/FTP utils
