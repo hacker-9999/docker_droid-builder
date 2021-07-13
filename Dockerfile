@@ -11,11 +11,7 @@ ENV \
   JAVA_OPTS=" -Xmx7G " \
   JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 \
   PATH=~/bin:/usr/local/bin:/home/builder/bin:$PATH \
-  USE_CCACHE=1 \
-  CCACHE_COMPRESS=1 \
-  CCACHE_COMPRESSLEVEL=8 \
-  CCACHE_DIR=/srv/ccache
-
+  USE_CCACHE=1
 # Expand apt repository beyond itself
 RUN sed 's/main$/main universe/' /etc/apt/sources.list 1>/dev/null
 
